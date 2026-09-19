@@ -318,8 +318,13 @@ st.markdown(
         .hero h1 { font-size: 66px; }
         .contact { margin-left: -24px; margin-right: -24px; padding: 64px 24px; }
         .footer { gap: 18px; flex-direction: column; }
-        .reference-copy { padding: 70px 8% 220px; }
-        .reference-photo { max-height: 53%; max-width: 56%; right: 4%; }
+        .reference-hero { display: flex; flex-direction: column; min-height: 0; }
+        .reference-copy { order: 1; padding: 64px 8% 30px; }
+        .reference-copy h1 { font-size: clamp(50px, 16vw, 76px); }
+        .reference-copy p { max-width: none; }
+        .reference-photo { align-self: flex-end; bottom: auto; max-height: none; max-width: none; object-fit: contain; position: relative; right: auto; width: 78%; z-index: 1; }
+        .float-badge { right: 7%; top: 5%; z-index: 3; }
+        .hero-scroll { display: none; }
         .showcase { align-items: stretch; flex-direction: column; }
         .icon-skill-grid { grid-template-columns: repeat(4, 1fr); }
         .capability-grid, .achievement-grid { grid-template-columns: 1fr; }
