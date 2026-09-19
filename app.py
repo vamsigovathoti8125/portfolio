@@ -151,6 +151,7 @@ PROJECTS = [
 
 ROOT = Path(__file__).parent
 PHOTO = ROOT / "assets" / "profile.png"
+RESUME = ROOT / "assets" / "Vamsi_Govathoti_Resume.pdf"
 ASSETS = ROOT / "assets"
 
 skill_rows = "".join(
@@ -423,6 +424,15 @@ st.markdown(
 st.markdown('<div id="top"></div>', unsafe_allow_html=True)
 if PHOTO.exists():
     photo_data = base64.b64encode(PHOTO.read_bytes()).decode("ascii")
+    resume_actions = ""
+    if RESUME.exists():
+        resume_data = base64.b64encode(RESUME.read_bytes()).decode("ascii")
+        resume_actions = (
+            f'<a class="hero-action" href="data:application/pdf;base64,{resume_data}" '
+            'target="_blank" rel="noreferrer">See resume ↗</a>'
+            f'<a class="hero-action" href="data:application/pdf;base64,{resume_data}" '
+            'download="Vamsi_Govathoti_Resume.pdf">Download resume ↓</a>'
+        )
     st.markdown(
         f"""
         <div class="reference-hero">
@@ -434,7 +444,7 @@ if PHOTO.exists():
                 <p>{PROFILE["intro"]} I love turning ambitious ideas into clean, working experiences.</p>
                 <div class="hero-actions">
                     <a class="hero-action" href="#work">See selected work ↘</a>
-                    <a class="hero-action" href="mailto:{PROFILE["email"]}?subject=Portfolio%20opportunity">Request resume ↗</a>
+                    {resume_actions}
                     <a class="hero-action" href="{PROFILE["github"]}" target="_blank" rel="noreferrer">GitHub ↗</a>
                 </div>
             </div>

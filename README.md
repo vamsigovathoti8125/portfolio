@@ -9,6 +9,7 @@ Personal portfolio website for Govathoti Vamsi, built with Streamlit. It present
 - Clickable AI/ML internship experience with a dedicated Smart Sorting case study
 - Project-specific visual cards and technology tags
 - Profile photo and project artwork stored locally in `assets/`
+- Resume preview and download actions using the PDF in `assets/`
 - GitHub, LinkedIn, email, and phone contact links
 - Streamlit configuration for local-network access on port `8501`
 
@@ -70,6 +71,7 @@ portfolio/
 ├── app.py
 ├── assets/
 │   ├── profile.png
+│   ├── Vamsi_Govathoti_Resume.pdf
 │   ├── image.png
 │   ├── pro exp 1.png
 │   ├── pro exp 3.png
