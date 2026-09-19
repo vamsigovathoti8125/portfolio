@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Govathoti Vamsi — Software Developer",
-    page_icon="✦",
+    page_icon="assets/favicon.jpg",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
